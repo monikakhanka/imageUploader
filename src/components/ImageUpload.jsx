@@ -13,8 +13,16 @@ const ImageUpload = () => {
       setAvatarUrl(loadingGig);
       const uploadedFile = fileUploadRef.current.files[0];
 
+      if (!uploadedFile) {
+        setAvatarUrl(DEFAULT_IMG);
+        return;
+      }
+
+      // create an empty form
       const formData = new FormData();
 
+      // "file" is the name of field
+      // upploaded file is actual file
       formData.append("file", uploadedFile);
 
       const response = await fetch(
@@ -27,7 +35,7 @@ const ImageUpload = () => {
 
       if (response.status === 201) {
         const data = await response.json();
-        setAvatarUrl(data?.location);
+        setAvatarUrl(data?.location || DEFAULT_IMG);
       }
     } catch (error) {
       console.error(error);
@@ -54,7 +62,7 @@ const ImageUpload = () => {
           className="w-96 h-96 rounded-full bg-cyan-100 content-center items-center mt-20 object-cover"
         />
 
-        <form action="">
+        <form>
           <button
             type="submit"
             className="absolute"

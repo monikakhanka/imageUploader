@@ -38,3 +38,28 @@ module.exports = {
 ```
 
 - npm run start
+
+# How it works:
+
+## Click on edit button
+
+- on clicking it automatically opens the dialog box to upload image
+- provides only one picture upload functionality
+- on seletion displays the image as the avatar
+
+# concepts used:
+
+## useState hook
+
+- to store the avatarUrl and update it
+
+## useRef hook
+
+- to directly manipulate the DOM element
+- simulate click event on upload image of input file type
+
+## event.preventDefault()
+
+- to stop the page from reloading on each click event
+
+## Form data
