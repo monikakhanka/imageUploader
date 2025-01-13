@@ -63,3 +63,8 @@ module.exports = {
 - to stop the page from reloading on each click event
 
 ## Form data
+
+# Screenshot of component
+
+- avatar url
+  ![Avatar Component](screenshots/Image Uploader - Google Chrome 2025-01-13 22-24-32.mp4)
