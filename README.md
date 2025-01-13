@@ -67,4 +67,4 @@ module.exports = {
 # Screenshot of component
 
 - avatar url
-  ![Avatar Component](screenshots/Image Uploader - Google Chrome 2025-01-13 22-24-32.mp4)
+  ![Avatar Component](screenshots/screenshots/ImageUploader.mp4)
